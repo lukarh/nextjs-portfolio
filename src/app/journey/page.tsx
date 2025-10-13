@@ -16,7 +16,7 @@ export default function Page() {
           className="relative border-l border-[#40444b] m-2"
         >
           {resume.map((item: Resume, index: number) => {
-            return <ResumeCard item={item} index={index} />;
+            return <ResumeCard item={item} index={index} key={index} />;
           })}
         </motion.div>
       </div>

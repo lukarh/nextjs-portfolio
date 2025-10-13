@@ -3,7 +3,10 @@ import { NextResponse } from "next/server";
 export async function GET() {
   const DISCORD_ID = process.env.DISCORD_ID; // your Discord user ID
   if (!DISCORD_ID) {
-    return NextResponse.json({ error: "Server misconfigured" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Server misconfigured" },
+      { status: 500 }
+    );
   }
 
   try {
@@ -24,6 +27,9 @@ export async function GET() {
     return NextResponse.json(publicData);
   } catch (err) {
     console.error(err);
-    return NextResponse.json({ error: "Failed to fetch Discord status" }, { status: 502 });
+    return NextResponse.json(
+      { error: "Failed to fetch Discord status" },
+      { status: 502 }
+    );
   }
 }

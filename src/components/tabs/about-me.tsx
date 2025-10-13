@@ -69,7 +69,8 @@ export default function AboutMe() {
     <div className="flex flex-col gap-3 py-5 sm:px-5 text-[#D0D0D2]">
       {/* BIOGRAPHY SECTION */}
       <p>
-        hey! I'm Lukar and currently a<strong> Front-End Developer </strong>
+        hey! I&apos;m Lukar and currently a
+        <strong> Front-End Developer </strong>
         for the GRAS Team at
         <span className="text-blue-500 font-bold"> Spatial Front Inc</span>.
         Graduated from

@@ -15,19 +15,20 @@ import Image from "next/image";
 
 export default function DiscordCard() {
   const [status, setStatus] = useState<DiscordStatus | null>(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   const fetchStatus = async () => {
-    setLoading(true);
+    // setLoading(true);
     try {
       const res = await fetch("/api/discord-status");
       const data = await res.json();
       setStatus(data);
     } catch (err) {
       console.error(err);
-    } finally {
-      setLoading(false);
     }
+    // finally {
+    //   setLoading(false);
+    // }
   };
 
   useEffect(() => {

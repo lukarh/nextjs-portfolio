@@ -4,17 +4,25 @@ import { useEffect, useState } from "react";
 interface ProgressBarProps {
   start: number;
   end: number;
-  onSongEnd?: () => void; 
+  onSongEnd?: () => void;
   listeningToSpotify: boolean;
 }
 
-export default function SpotifyProgressBar({ start, end, onSongEnd, listeningToSpotify }: ProgressBarProps) {
+export default function SpotifyProgressBar({
+  start,
+  end,
+  onSongEnd,
+  listeningToSpotify,
+}: ProgressBarProps) {
   const duration = end - start;
 
   const initialNow = Math.min(Math.max(Date.now(), start), end);
   const [current, setCurrent] = useState(initialNow);
-  const [progress, setProgress] = useState(((initialNow - start) / duration) * 100);
+  const [progress, setProgress] = useState(
+    ((initialNow - start) / duration) * 100
+  );
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const interval = setInterval(() => {
       const now = Math.min(Date.now(), end);
@@ -42,7 +50,10 @@ export default function SpotifyProgressBar({ start, end, onSongEnd, listeningToS
     <div className="flex items-center w-full space-x-2">
       <span className="text-xs">{formatTime(current - start)}</span>
       <div className="relative flex-1 h-1 bg-gray-500 rounded">
-        <div className="absolute h-1 bg-white rounded" style={{ width: `${progress}%` }} />
+        <div
+          className="absolute h-1 bg-white rounded"
+          style={{ width: `${progress}%` }}
+        />
       </div>
       <span className="text-xs">{formatTime(duration)}</span>
     </div>
