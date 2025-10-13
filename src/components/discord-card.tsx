@@ -11,6 +11,7 @@ import {
 import Tabs from "./tabs/tabs";
 import { DiscordStatus } from "@/models/discord-status";
 import StatusIcon from "./status-icon";
+import Image from "next/image";
 
 export default function DiscordCard() {
   const [status, setStatus] = useState<DiscordStatus | null>(null);
@@ -98,22 +99,28 @@ export default function DiscordCard() {
         style={{ transform: "translateZ(75px)" }}
       >
         <div className="h-[150px] overflow-hidden rounded-t-lg">
-          <img
-            src="assets/profile/spaceV2.gif"
+          <Image
+            src="/assets/profile/spaceV2.gif"
             alt="Discord Banner"
+            width={700}
+            height={150}
             className="w-full h-auto object-cover object-bottom"
           />
-          <div className="absolute top-18 left-5 w-36 h-36 z-2">
-            <img
-              src="assets/profile/decoration.png"
+          <div className="absolute top-18 left-5 z-2">
+            <Image
+              src="/assets/profile/decoration.png"
               alt="Discord Avatar Decoration"
+              width={144}
+              height={144}
             />
           </div>
-          <div className="absolute top-18 left-5 w-36 h-36 z-1">
-            <img
-              src={status?.discordAvatar || "assets/profile/eevee.png"}
+          <div className="absolute top-18 left-5 z-1">
+            <Image
+              src={status?.discordAvatar || "/assets/profile/eevee.png"}
               alt="Discord Avatar"
-              className="rounded-full bg-white outline-10 outline-[#1A1A1E] w-36 h-36"
+              className="rounded-full bg-white outline-10 outline-[#1A1A1E]"
+              width={144}
+              height={144}
             />
           </div>
           <StatusIcon status={status?.status} />
@@ -127,23 +134,26 @@ export default function DiscordCard() {
                 <span className="font-sans">•</span>
                 <span className="font-sans">(he/him)</span>
                 <div className="flex flex-row gap-2">
-                  <img
-                    src="assets/badges/known.png"
+                  <Image
+                    src="/assets/badges/known.png"
                     alt="Discord Known Icon"
-                    className="h-4 w-4"
                     title="lukar.h"
+                    width={16}
+                    height={16}
                   />
-                  <img
-                    src="assets/badges/developer.gif"
+                  <Image
+                    src="/assets/badges/developer.gif"
                     alt="Discord Known Icon"
-                    className="h-4 w-4"
                     title="Developer Badge"
+                    width={16}
+                    height={16}
                   />
-                  <img
-                    src="assets/badges/quest.png"
+                  <Image
+                    src="/assets/badges/quest.png"
                     alt="Discord Known Icon"
-                    className="h-4 w-4"
                     title="Completed a Quest"
+                    width={16}
+                    height={16}
                   />
                 </div>
               </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { SiSpotify, SiLinkedin, SiGithub } from "react-icons/si";
 import SkillBadge from "@/components/skill-badge";
+import Image from "next/image";
 
 const techStack = [
   "TypeScript",
@@ -18,14 +19,14 @@ const experiences = [
     place: "Spatial Front Inc.",
     title: "Front-End Developer",
     timeframe: "Oct 2023 — Present",
-    png: "assets/icons/sfi.png",
+    png: "/assets/icons/sfi.png",
     alt: "SFI Icon",
   },
   {
     place: "Carnegie Mellon",
     title: "Alumni - B.S. in Physics",
     timeframe: "Aug 2018 — May 2022",
-    png: "assets/icons/cmu.png",
+    png: "/assets/icons/cmu.png",
     alt: "CMU Icon",
   },
 ];
@@ -92,10 +93,11 @@ export default function AboutMe() {
                 className="flex flex-row flex-wrap gap-2 items-center"
                 key={index}
               >
-                <img
-                  className={`w-5`}
+                <Image
                   src={experience.png}
                   alt={experience.alt}
+                  height={20}
+                  width={20}
                 />
                 <p className="mt-[2px]">{experience.place}</p>
                 <span className="font-sans">•</span>

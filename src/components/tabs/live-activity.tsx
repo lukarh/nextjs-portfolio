@@ -5,6 +5,7 @@ import { SiSpotify, SiChessdotcom } from "react-icons/si";
 import { PiGameControllerFill } from "react-icons/pi";
 import SongProgressBar from "@/components/song-progress-bar";
 import { DiscordStatus } from "@/models/discord-status";
+import Image from "next/image";
 // import { TFTRankInfo } from "@/models/riot";
 
 export default function LiveActivity({
@@ -80,13 +81,15 @@ export default function LiveActivity({
           <SiSpotify className="text-gray-500" size={14} />
         </div>
         <div className="flex flex-row gap-5">
-          <img
+          <Image
             src={
               status?.activities?.album_art_url ||
-              "assets/spotify/harrys_house.jpg"
+              "/assets/spotify/harrys_house.jpg"
             }
             alt={`${status?.activities?.album} cover`}
-            className="w-32 h-32 rounded"
+            className="rounded"
+            width={128}
+            height={128}
           />
           <div className="w-full flex flex-col justify-center">
             <span className="font-bold">
@@ -110,10 +113,12 @@ export default function LiveActivity({
           <SiChessdotcom className="text-gray-500" size={14} />
         </div>
         <div className="flex flex-row gap-5">
-          <img
-            src={"assets/icons/TFT.png"}
+          <Image
+            src={"/assets/icons/TFT.png"}
             alt={`Teamfight Tactics cover`}
-            className="w-32 h-32 rounded"
+            className="rounded"
+            width={128}
+            height={128}
           />
           <div className="w-full flex flex-col justify-center">
             <span className="font-bold">Ranked</span>
@@ -138,15 +143,19 @@ export default function LiveActivity({
           <PiGameControllerFill className="text-gray-500" size={14} />
         </div>
         <div className="flex flex-row gap-5">
-          <img
-            src={"assets/icons/valorant.jpg"}
+          <Image
+            src={"/assets/icons/valorant.jpg"}
             alt={`Valorant cover`}
-            className="w-32 h-32 rounded"
+            className="rounded"
+            width={128}
+            height={128}
           />
-          <img
-            src={"assets/icons/pokemon.png"}
+          <Image
+            src={"/assets/icons/pokemon.png"}
             alt={`Teamfight Tactics cover`}
-            className="w-32 h-32 rounded"
+            className="rounded"
+            width={128}
+            height={128}
           />
         </div>
       </div>

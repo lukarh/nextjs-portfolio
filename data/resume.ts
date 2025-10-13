@@ -25,7 +25,7 @@ export const resume = [
       "JIRA",
       "Jenkins",
     ],
-    src: "assets/icons/sfi.png",
+    src: "/assets/icons/sfi.png",
     alt: "SFI",
   },
   {
@@ -48,7 +48,7 @@ export const resume = [
     description: `• Completed extensive coursework in physics, complemented by studies in data science and fundamental programming, and transitioned these analytical and computational skills into software engineering with a focus on design and optimization.
       • Member of the CMU Sports Analytics Club - a mentee under Milwaukee Bucks' Analytics Manager Ashley Brio
     `,
-    src: "assets/icons/cmu.png",
+    src: "/assets/icons/cmu.png",
     alt: "CMU",
   },
   {
@@ -60,7 +60,7 @@ export const resume = [
     description: `• Assisted the Professor with the execution of 36-220 Engineering Statistics & Quality Control course throughout the semester 
       • Held Office Hours weekly to assist students with homework and answer any general questions
       • Graded weekly assignments and exams through Gradescope`,
-    src: "assets/icons/cmustats.jpg",
+    src: "/assets/icons/cmustats.jpg",
     alt: "CMU Stats & Data Science Department",
   },
   {
@@ -73,7 +73,7 @@ export const resume = [
       • Completed administrative tasks such as formatting documents, updating records, reviewing/editing communications, and providing general support in The HUB
       • Served as a friendly, engaging, and positive representative of the department by communicating effectively and professionally with full time Enrollment Services Staff members, students, and visitors
       • Provided front desk coverage by answering phone calls, directing visitors, opening and distributing mail, and greeting students and staff`,
-    src: "assets/icons/cmualt.png",
+    src: "/assets/icons/cmualt.png",
     alt: "CMU - The HUB",
   },
   {
@@ -89,7 +89,7 @@ export const resume = [
       • Managed professional communications with 20+ partnered worksites, parents, and youth via email, phone, and in-person
       • Regulated team’s processes by acting as a second point of contact for escalated problems regarding any hiring or payroll issues with youth employees, parents, and partnered worksites`,
     skills: ["PeopleSoft", "iCIMS", "Python", "Google Sheets", "DocuSign"],
-    src: "assets/icons/cob.png",
+    src: "/assets/icons/cob.png",
     alt: "City of Boston",
   },
 ];

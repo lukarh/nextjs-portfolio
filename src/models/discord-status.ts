@@ -3,5 +3,17 @@ export interface DiscordStatus {
   discordAvatar: string;
   status: string;
   listening_to_spotify: boolean;
-  activities: any;
+  activities: SpotifyActivity | null;
+}
+
+export interface SpotifyActivity {
+  timestamps: {
+    start: number;
+    end: number;
+  };
+  album: string;
+  album_art_url: string;
+  artist: string;
+  song: string;
+  track_id: string;
 }
