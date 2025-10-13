@@ -1,0 +1,86 @@
+"use client";
+
+import React from "react";
+import { usePathname } from "next/navigation";
+import { LuUserRound, LuFile } from "react-icons/lu";
+import { MdOutlineTimeline } from "react-icons/md";
+
+export default function Sidebar() {
+  const SidebarData = [
+    {
+      icon: <LuUserRound size={18} />,
+      text: "About Me",
+      hrefs: ["/about", "/"],
+    },
+    {
+      icon: <MdOutlineTimeline size={18} />,
+      text: "My Journey",
+      hrefs: ["/journey"],
+    },
+    {
+      icon: <LuFile size={18} />,
+      text: "Projects",
+      hrefs: ["/projects"],
+    },
+    // {
+    //   icon: <LuMessageCircle size={18} />,
+    //   text: "Message",
+    //   hrefs: ["/message"],
+    // },
+  ];
+
+  const pathname = usePathname();
+
+  return (
+    <aside className="h-auto min-w-[15rem] w-2/3 max-w-[2/3] shrink hidden lg:flex lg:flex-col bg-[#121214]">
+      <nav className="pt-10">
+        <div className="w-full flex-1 flex flex-col items-end px-5 pb-2">
+          <div className="w-[175px]">
+            <h3 className="text-white font-bold">User Settings</h3>
+          </div>
+        </div>
+        <ul className="w-full flex-1 flex flex-col items-end px-3">
+          {SidebarData.map((data, index) => {
+            const isActive = data.hrefs.includes(pathname);
+            return (
+              <SideBarItem
+                key={index}
+                icon={data.icon}
+                text={data.text}
+                active={isActive}
+                hrefs={data.hrefs}
+              />
+            );
+          })}
+        </ul>
+      </nav>
+    </aside>
+  );
+}
+
+export function SideBarItem({
+  icon,
+  text,
+  active,
+  hrefs,
+}: {
+  icon: React.ReactNode;
+  text: string;
+  active: boolean;
+  hrefs: string[];
+}) {
+  return (
+    <a href={hrefs[0]} className="px-5">
+      <li
+        className={`relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer
+      transition-colors hover:bg-zinc-800 text-white w-[175px] gap-3 ${
+        active && "bg-zinc-800"
+      } 
+      `}
+      >
+        <span className="min-w-[18px] h-[18px]">{icon}</span>
+        <span className="hidden sm:block">{text}</span>
+      </li>
+    </a>
+  );
+}
