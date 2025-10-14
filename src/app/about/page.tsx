@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       {/* TABLET SCREEN SIZES AND BELOW */}
-      <div className="block xl:hidden items-center justify-center flex-1 overflow-y-auto ">
+      <div className="block xl:hidden items-center justify-center flex-1 overflow-y-auto hide-scrollbar">
         {/* BANNER & AVATAR & TABS*/}
         <Profile status={status} avatarLeft={2} statusLeft={4} />
         <div className="m-5 mb-[60px]">
