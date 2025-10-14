@@ -86,7 +86,7 @@ export default function AboutMe() {
       </p>
       {/* EXPERIENCE & EDUCATION SECTION */}
       <div>
-        <h2 className="font-bold text-lg">Experience & Education</h2>
+        <h2 className="font-bold text-lg">Current Job Title & Education</h2>
         <div className="flex flex-col gap-1 mt-1">
           {experiences.map((experience, index) => {
             return (
@@ -113,25 +113,24 @@ export default function AboutMe() {
       {/* CONNECTIONS SECTION */}
       <div>
         <h2 className="font-bold text-lg mb-3">Connections</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1 group/list">
           {connections.map((connection, index) => {
             return (
-              <div
-                className="flex flex-row flex-wrap justify-between gap-2 items-center rounded-md bg-[#242429] outline-[#323236] outline-1 px-3 py-1"
-                key={index}
-              >
-                <div className="flex flex-row items-center gap-2">
-                  {connection.icon}
-                  <span className="font text-sm pb-[0.035rem]">
-                    {connection.social}
-                  </span>
+              <a href={connection.href} target="_blank" key={index}>
+                <div
+                  className={`flex flex-row flex-wrap justify-between gap-2 items-center rounded-md 
+                    bg-[#242429] outline-[#323236] outline-1 px-3 py-1 hover:!opacity-100 
+                    group-hover/list:opacity-50 group-hover/list:outline-slate-200/30`}
+                >
+                  <div className="flex flex-row items-center gap-2">
+                    {connection.icon}
+                    <span className="font text-sm pb-[0.035rem]">
+                      {connection.social}
+                    </span>
+                  </div>
+                  <FiArrowUpRight className="text-gray-500 group-hover/list:text-white" />
                 </div>
-                {connection.href && (
-                  <a href={connection.href} target="_blank">
-                    <FiArrowUpRight className="text-gray-500 hover:text-white" />
-                  </a>
-                )}
-              </div>
+              </a>
             );
           })}
         </div>

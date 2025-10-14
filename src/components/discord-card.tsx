@@ -106,6 +106,7 @@ export default function DiscordCard() {
             width={700}
             height={150}
             className="w-full h-auto object-cover object-bottom"
+            unoptimized
           />
           <div className="absolute top-18 left-5 z-2">
             <Image
@@ -113,6 +114,7 @@ export default function DiscordCard() {
               alt="Discord Avatar Decoration"
               width={144}
               height={144}
+              unoptimized
             />
           </div>
           <div className="absolute top-18 left-5 z-1">
@@ -148,6 +150,7 @@ export default function DiscordCard() {
                     title="Developer Badge"
                     width={16}
                     height={16}
+                    unoptimized
                   />
                   <Image
                     src="/assets/badges/quest.png"
