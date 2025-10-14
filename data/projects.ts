@@ -5,10 +5,17 @@ export const projectItems = [
         
         `,
     date: "May 2023",
-    techStack: ["TypeScript", "TailwindCSS", "Next.js", "HTML", "Discord API", "Riot Games API"],
+    techStack: [
+      "TypeScript",
+      "TailwindCSS",
+      "Next.js",
+      "HTML",
+      "Discord API",
+      "Riot Games API",
+    ],
     githubURL: "https://github.com/lukarh/nextjs-portfolio",
-    appURL: "",
-    src: '/assets/projects/portfolio.png'
+    appURL: "https://lukar-portfolio.vercel.app/",
+    src: "/assets/projects/portfolio.png",
   },
   {
     title: "Vibeify",
@@ -29,7 +36,7 @@ export const projectItems = [
     ],
     githubURL: "https://github.com/lukarh/vibeify",
     appURL: "https://vibeify-1cdb0dbbe555.herokuapp.com/",
-    src: '/assets/projects/vibeify.png'
+    src: "/assets/projects/vibeify.png",
   },
   {
     title: "Tracking Player Assists Dashboard",
@@ -48,7 +55,7 @@ export const projectItems = [
     ],
     githubURL: "https://github.com/lukarh/assists-tracking-dash-app",
     appURL: "https://tracking-dashboard-app.herokuapp.com/dashboard",
-    src: '/assets/projects/tracking-assists-app.png'
+    src: "/assets/projects/tracking-assists-app.png",
   },
   {
     title: "NBA Stats & Bets Discord Bot",
@@ -56,9 +63,15 @@ export const projectItems = [
             place bets on games using fictitious points. Powered by NBA Live API and FanDuel's Game Odds.
         `,
     date: "May 2023",
-    techStack: ["MongoDB", "Discord API", "Node.js", "JavaScript", "NBA Live API"],
+    techStack: [
+      "MongoDB",
+      "Discord API",
+      "Node.js",
+      "JavaScript",
+      "NBA Live API",
+    ],
     githubURL: "https://github.com/lukarh/nba-discord-bot",
     appURL: "",
-    src: '/assets/projects/bet-discord-bot.png'
+    src: "/assets/projects/bet-discord-bot.png",
   },
-]
+];

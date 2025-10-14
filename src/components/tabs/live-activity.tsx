@@ -69,6 +69,8 @@ export default function LiveActivity({
   //   }
   // };
 
+  console.log("art url:", status?.activities?.album_art_url);
+
   return (
     <div>
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
@@ -76,7 +78,7 @@ export default function LiveActivity({
           <h2 className="font-bold text-xs text-gray-300">
             {status?.listening_to_spotify
               ? "Listening to Spotify"
-              : "Somehow Not Listening to Spotify atm - so here's one of my favorite song now"}
+              : "Somehow not listening to Spotify atm - so here's one of my favorite song now"}
           </h2>
           <SiSpotify className="text-gray-500" size={14} />
         </div>
@@ -92,18 +94,20 @@ export default function LiveActivity({
             height={128}
           />
           <div className="w-full flex flex-col justify-center">
-            <span className="font-bold">
+            <p className="font-bold">
               {status?.activities?.song || "Daylight"}
-            </span>
-            <span className="text-sm mb-3">
+            </p>
+            <p className="text-sm mb-3">
               {status?.activities?.artist || "Harry Styles"}
-            </span>
-            <SongProgressBar
-              start={status?.activities?.timestamps.start || 0}
-              end={status?.activities?.timestamps.end || 0}
-              onSongEnd={fetchStatus}
-              listeningToSpotify={status?.listening_to_spotify || false}
-            />
+            </p>
+            {status?.listening_to_spotify && (
+              <SongProgressBar
+                start={status?.activities?.timestamps.start || 0}
+                end={status?.activities?.timestamps.end || 0}
+                onSongEnd={fetchStatus}
+                listeningToSpotify={status?.listening_to_spotify || false}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -121,19 +125,18 @@ export default function LiveActivity({
             height={128}
           />
           <div className="w-full flex flex-col justify-center">
-            <span className="font-bold">Ranked</span>
-            <div>
-              <span
-                className="text-sm mb-3"
-                style={{ color: rankTextColor("DIAMOND") }}
-                // style={{ color: rankTextColor(tftData.tier || "N/A") }}
-              >
-                {"DIAMOND III"}
-                {/* {rankText()} */}
-              </span>
-            </div>
+            <p className="font-bold">Ranked</p>
+            <p
+              className="text-sm mb-3"
+              style={{ color: rankTextColor("DIAMOND") }}
+              // style={{ color: rankTextColor(tftData.tier || "N/A") }}
+            >
+              {"DIAMOND III"}
+              {/* {rankText()} */}
+            </p>
           </div>
         </div>
+        <p className="text-xs text-gray-400">Powered by Riot Games API.</p>
       </div>
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
         <div className="flex flex-row items-center gap-2">
