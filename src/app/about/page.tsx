@@ -38,7 +38,7 @@ export default function Home() {
       <div className="block xl:hidden items-center justify-center flex-1">
         {/* BANNER & AVATAR & TABS*/}
         <Profile status={status} avatarLeft={2} statusLeft={4} />
-        <div className="m-5 pb-[60px]">
+        <div className="m-5 mb-[60px]">
           <Tabs status={status} fetchStatus={fetchStatus} />
         </div>
       </div>
