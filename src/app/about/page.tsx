@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen w-full bg-zinc-900 flex flex-col">
+    <main className="h-screen xl:h-auto xl:min-h-screen w-full bg-zinc-900 flex flex-col">
       {/* DESKTOP SIZE AND ABOVE */}
       <div className="hidden xl:block p-20">
         <DiscordCard />

@@ -15,7 +15,7 @@ export default function Profile({
 }) {
   return (
     <>
-      <div className="h-[9.5%] overflow-hidden rounded-t-lg">
+      <div className="h-[150px] overflow-hidden rounded-t-lg">
         <Image
           src="/assets/profile/spaceV2.gif"
           alt="Discord Banner"

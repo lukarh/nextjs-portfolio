@@ -94,7 +94,7 @@ export default function DiscordCard() {
       }}
     >
       <div
-        className={`relative rounded-lg min-h-[1000px] w-[700px] max-w-[700px] shadow-2xl 
+        className={`relative rounded-lg w-[700px] max-w-[700px] shadow-2xl 
           bg-[#1A1A1E] outline-[#323236] outline-2 text-white`}
         style={{ transform: "translateZ(75px)" }}
       >

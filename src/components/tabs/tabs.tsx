@@ -41,7 +41,6 @@ export default function Tabs({
           ))}
         </div>
       </div>
-      {/* <div className="flex flex-wrap max-h-[400px] sm:max-h-[600px] overflow-y-auto"> */}
       <div className="flex flex-wrap overflow-y-auto">
         {tabs.map((tab) => (
           <div
