@@ -22,7 +22,7 @@ export default function ProjectCard({
 }) {
   return (
     <div
-      className={`group flex flex-col gap-3 p-7 min-h-[325px] rounded-2xl shadow-2xl
+      className={`group flex flex-col gap-3 p-7 min-h-[325px] max-w-[900px] rounded-2xl shadow-2xl
      bg-[#1A1A1E] backdrop-blur-md outline-[#323236] outline-2 hover:outline-slate-200/30
      transform transition-transform duration-300 ease-out hover:scale-105
      hover:!opacity-100 group-hover/list:opacity-50`}
@@ -51,7 +51,7 @@ export default function ProjectCard({
             <p className="text-xl text-slate-200 font-bold pb-5">{title}</p>
             <p className="text-lg text-slate-300 font-medium">{description}</p>
           </div>
-          <div className="flex-shrink-0 w-[200px] aspect-video rounded-xl border-2 border-slate-200/10 group-hover:border-slate-200/20 overflow-hidden">
+          <div className="flex-shrink-0 hidden sm:block w-[200px] aspect-video rounded-xl border-2 border-slate-200/10 group-hover:border-slate-200/20 overflow-hidden">
             <Image
               src={src}
               alt={title}

@@ -72,7 +72,7 @@ export default function LiveActivity({
   console.log("art url:", status?.activities?.album_art_url);
 
   return (
-    <div>
+    <div className="pb-20 xl:pb-0">
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
         <div className="flex flex-row items-center gap-2">
           <h2 className="font-bold text-xs text-gray-300">
