@@ -27,6 +27,7 @@ export const resume = [
     ],
     src: "/assets/icons/sfi.png",
     alt: "SFI",
+    active: true,
   },
   {
     id: "2",
@@ -38,6 +39,7 @@ export const resume = [
       • Engineered a robust data pipeline to gather data from online sources by developing web-scrapers using Selenium and Python, integrating and pulling data from Sports Info Solutions’ API, and organizing a directory to store the data 
       • Applied K-Means clustering and regression techniques to project fantasy points and create 8+ player archetype models`,
     skills: ["Python", "Jupyter", "Tableau", "Google Sheets"],
+    active: false,
   },
   {
     id: "3",
@@ -50,6 +52,7 @@ export const resume = [
     `,
     src: "/assets/icons/cmu.png",
     alt: "CMU",
+    active: false,
   },
   {
     id: "4",
@@ -62,6 +65,7 @@ export const resume = [
       • Graded weekly assignments and exams through Gradescope`,
     src: "/assets/icons/cmustats.jpg",
     alt: "CMU Stats & Data Science Department",
+    active: false,
   },
   {
     id: "5",
@@ -75,6 +79,7 @@ export const resume = [
       • Provided front desk coverage by answering phone calls, directing visitors, opening and distributing mail, and greeting students and staff`,
     src: "/assets/icons/cmualt.png",
     alt: "CMU - The HUB",
+    active: false,
   },
   {
     id: "6",
@@ -91,5 +96,6 @@ export const resume = [
     skills: ["PeopleSoft", "iCIMS", "Python", "Google Sheets", "DocuSign"],
     src: "/assets/icons/cob.png",
     alt: "City of Boston",
+    active: false,
   },
 ];

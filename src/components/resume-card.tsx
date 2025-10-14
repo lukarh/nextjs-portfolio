@@ -59,6 +59,13 @@ export default function ResumeCard({
             <FaGraduationCap className="text-emerald-400 text-lg" />
           )}
           <h3 className="text-lg font-semibold text-slate-100">{item.title}</h3>
+          {item.active && (
+            <div className="flex items-center gap-2 bg-zinc-800 text-white px-3 py-1 rounded-full text-xs font-small">
+              {/* Green circle */}
+              <span className="w-2 h-2 bg-green-500 rounded-full inline-block  animate-pulse" />
+              Active
+            </div>
+          )}
         </div>
         <div className="flex flex-row gap-2 items-center">
           <p className="text-md text-slate-400 font-medium">

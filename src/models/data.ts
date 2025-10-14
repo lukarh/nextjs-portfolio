@@ -18,4 +18,5 @@ export interface Resume {
   skills?: string[];
   src?: string;
   alt?: string;
+  active: boolean;
 }
