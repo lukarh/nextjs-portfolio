@@ -69,8 +69,6 @@ export default function LiveActivity({
   //   }
   // };
 
-  console.log("art url:", status?.activities?.album_art_url);
-
   return (
     <div className="pb-20 xl:pb-0">
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
@@ -85,8 +83,7 @@ export default function LiveActivity({
         <div className="flex flex-row gap-5">
           <Image
             src={
-              status?.activities?.album_art_url ||
-              "/assets/spotify/harrys_house.jpg"
+              status?.activities?.album_art_url || "/assets/spotify/ZOMBIES.jpg"
             }
             alt={`${status?.activities?.album} cover`}
             className="rounded"
@@ -94,11 +91,9 @@ export default function LiveActivity({
             height={128}
           />
           <div className="w-full flex flex-col justify-center">
-            <p className="font-bold">
-              {status?.activities?.song || "Daylight"}
-            </p>
+            <p className="font-bold">{status?.activities?.song || "ZOMBIES"}</p>
             <p className="text-sm mb-3">
-              {status?.activities?.artist || "Harry Styles"}
+              {status?.activities?.artist || "pH-1"}
             </p>
             {status?.listening_to_spotify && (
               <SongProgressBar
