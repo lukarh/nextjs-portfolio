@@ -10,8 +10,7 @@ import {
 } from "framer-motion";
 import Tabs from "./tabs/tabs";
 import { DiscordStatus } from "@/models/discord-status";
-import StatusIcon from "./status-icon";
-import Image from "next/image";
+import Profile from "./profile";
 
 export default function DiscordCard() {
   const [status, setStatus] = useState<DiscordStatus | null>(null);
@@ -99,70 +98,8 @@ export default function DiscordCard() {
           bg-[#1A1A1E] outline-[#323236] outline-2 text-white`}
         style={{ transform: "translateZ(75px)" }}
       >
-        <div className="h-[150px] overflow-hidden rounded-t-lg">
-          <Image
-            src="/assets/profile/spaceV2.gif"
-            alt="Discord Banner"
-            width={700}
-            height={150}
-            className="w-full h-auto object-cover object-bottom"
-            unoptimized
-          />
-          <div className="absolute top-18 left-5 z-2">
-            <Image
-              src="/assets/profile/decoration.png"
-              alt="Discord Avatar Decoration"
-              width={144}
-              height={144}
-              unoptimized
-            />
-          </div>
-          <div className="absolute top-18 left-5 z-1">
-            <Image
-              src={status?.discordAvatar || "/assets/profile/eevee.png"}
-              alt="Discord Avatar"
-              className="rounded-full bg-white outline-10 outline-[#1A1A1E]"
-              width={144}
-              height={144}
-            />
-          </div>
-          <StatusIcon status={status?.status} />
-        </div>
-        <div className="flex flex-col m-5 mt-20">
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-col sm:ml-5">
-              <h1 className="text-2xl font-bold">Lukar</h1>
-              <div className="flex flex-row flex-wrap items-center gap-2">
-                <span className="text-xl">lukar.h</span>
-                <span className="font-sans">•</span>
-                <span className="font-sans">(he/him)</span>
-                <div className="flex flex-row gap-2">
-                  <Image
-                    src="/assets/badges/known.png"
-                    alt="Discord Known Icon"
-                    title="lukar.h"
-                    width={16}
-                    height={16}
-                  />
-                  <Image
-                    src="/assets/badges/developer.gif"
-                    alt="Discord Known Icon"
-                    title="Developer Badge"
-                    width={16}
-                    height={16}
-                    unoptimized
-                  />
-                  <Image
-                    src="/assets/badges/quest.png"
-                    alt="Discord Known Icon"
-                    title="Completed a Quest"
-                    width={16}
-                    height={16}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        <Profile status={status} avatarLeft={2} statusLeft={4} />
+        <div className="m-5">
           <Tabs status={status} fetchStatus={fetchStatus} />
         </div>
       </div>

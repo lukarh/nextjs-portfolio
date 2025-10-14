@@ -1,4 +1,14 @@
-export default function StatusIcon({ status }: { status: string | undefined }) {
+import React from "react";
+
+export default function StatusIcon({
+  status,
+  leftRemShift,
+}: {
+  status: string | undefined;
+  leftRemShift: number;
+}) {
+  const baseLeftRimShift: number = 32; // base shift
+
   const getStatusStyles = () => {
     switch (status) {
       case "online":
@@ -16,9 +26,12 @@ export default function StatusIcon({ status }: { status: string | undefined }) {
   return (
     <div
       className={`absolute top-45 left-32 z-10 outline-[#1A1A1E] outline-6 w-6 h-6 rounded-full ${getStatusStyles()}`}
+      style={{ left: `${(baseLeftRimShift + leftRemShift) / 4}rem` }}
     >
       {status === "idle" && (
-        <div className="absolute top-[-3] left-[-3] w-[1.3rem] h-[1.3rem] z-10 rounded-full bg-[#1A1A1E]"></div>
+        <div
+          className={`absolute top-[-3] left-[-3] w-[1.3rem] h-[1.3rem] z-10 rounded-full bg-[#1A1A1E]`}
+        />
       )}
       {status === "dnd" && (
         <div className="absolute inset-0 z-10 flex items-center justify-center">

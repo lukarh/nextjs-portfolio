@@ -32,7 +32,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="h-auto min-w-[15rem] w-2/3 max-w-[2/3] shrink hidden lg:flex lg:flex-col bg-[#121214]">
+    <aside className="h-auto min-w-[15rem] w-2/3 max-w-[2/3] shrink hidden xl:flex xl:flex-col bg-[#121214]">
       <nav className="pt-10">
         <div className="w-full flex-1 flex flex-col items-end px-5 pb-2">
           <div className="w-[175px]">

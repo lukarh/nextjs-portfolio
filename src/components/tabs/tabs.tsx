@@ -4,10 +4,20 @@ import AboutMe from "./about-me";
 import LiveActivity from "./live-activity";
 import { DiscordStatus } from "@/models/discord-status";
 
-export default function Tabs({ status, fetchStatus }: { status: DiscordStatus | null, fetchStatus: () => Promise<void> }) {
+export default function Tabs({
+  status,
+  fetchStatus,
+}: {
+  status: DiscordStatus | null;
+  fetchStatus: () => Promise<void>;
+}) {
   const tabs = [
     { id: "AboutMe", label: "About Me", content: <AboutMe /> },
-    { id: "LiveActivity", label: "Live Activity", content: <LiveActivity status={status} fetchStatus={fetchStatus} /> },
+    {
+      id: "LiveActivity",
+      label: "Live Activity",
+      content: <LiveActivity status={status} fetchStatus={fetchStatus} />,
+    },
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0].id);
@@ -15,7 +25,7 @@ export default function Tabs({ status, fetchStatus }: { status: DiscordStatus | 
   return (
     <div className="flex flex-col mt-1">
       <div className="border-b border-gray-500">
-        <div className="w-[70%] flex">
+        <div className="w-[100%] flex">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -36,7 +46,7 @@ export default function Tabs({ status, fetchStatus }: { status: DiscordStatus | 
         {tabs.map((tab) => (
           <div
             key={tab.id}
-            className={`w-full ${tab.id === activeTab ? "block" : "hidden" }`}
+            className={`w-full ${tab.id === activeTab ? "block" : "hidden"}`}
           >
             {tab.content}
           </div>
