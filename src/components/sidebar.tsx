@@ -36,7 +36,7 @@ export default function Sidebar() {
       <nav className="pt-10">
         <div className="w-full flex-1 flex flex-col items-end px-5 pb-2">
           <div className="w-[175px]">
-            <h3 className="text-white font-bold">User Settings</h3>
+            <h3 className="text-[#A5A5AC] font-bold">User Settings</h3>
           </div>
         </div>
         <ul className="w-full flex-1 flex flex-col items-end px-3">
@@ -73,9 +73,8 @@ export function SideBarItem({
     <a href={hrefs[0]} className="px-5">
       <li
         className={`relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer
-      transition-colors hover:bg-zinc-800 text-white w-[175px] gap-3 ${
-        active && "bg-zinc-800"
-      } 
+      transition-colors hover:bg-zinc-800 w-[175px] gap-3 hover:text-white
+      ${active && "bg-zinc-800"} ${active ? "text-white" : "text-[#A5A5AC]"}
       `}
       >
         <span className="min-w-[18px] h-[18px]">{icon}</span>
