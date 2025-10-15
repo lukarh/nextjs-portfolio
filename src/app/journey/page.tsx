@@ -8,7 +8,10 @@ import ResumeCard from "@/components/resume-card";
 export default function Page() {
   return (
     <main className="h-screen w-full bg-zinc-900 flex justify-center xl:justify-start">
-      <div className="h-[95%] flex flex-col items-center w-full max-w-3xl px-5 xl:px-10 py-20 mx-5 xl:mx-10 overflow-y-auto relative hide-scrollbar scroll-fade">
+      <div
+        className={`h-[95%] flex flex-col items-center w-full max-w-3xl px-5 
+          xl:px-10 py-20 xl:mx-10 overflow-y-auto relative hide-scrollbar scroll-fade`}
+      >
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}

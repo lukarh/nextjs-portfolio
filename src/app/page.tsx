@@ -35,10 +35,10 @@ export default function Home() {
       </div>
 
       {/* TABLET SCREEN SIZES AND BELOW */}
-      <div className="block xl:hidden items-center justify-center overflow-y-auto relative hide-scrollbar">
+      <div className="block xl:hidden items-center justify-center overflow-y-auto relative hide-scrollbar mb-[65px]">
         {/* BANNER & AVATAR & TABS*/}
         <Profile status={status} avatarLeft={2} statusLeft={4} />
-        <div className="m-5 mb-[60px]">
+        <div className="m-5">
           <Tabs status={status} fetchStatus={fetchStatus} />
         </div>
       </div>

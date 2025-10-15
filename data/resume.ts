@@ -58,7 +58,7 @@ export const resume = [
     id: "4",
     type: "work",
     title: "Undergraduate Teaching Assistant",
-    organization: "Carnegie Mellon Stats & Data Science Department",
+    organization: "CMU Stats & Data Science Department",
     period: "Jan 2022 –  May 2022",
     description: `• Assisted the Professor with the execution of 36-220 Engineering Statistics & Quality Control course throughout the semester 
       • Held Office Hours weekly to assist students with homework and answer any general questions
@@ -71,7 +71,7 @@ export const resume = [
     id: "5",
     type: "work",
     title: "Enrollment Services Student Ambassador",
-    organization: "Carnegie Mellon University - The HUB",
+    organization: "Carnegie Mellon - The HUB",
     period: "Oct 2019 - May 2020, Sep 2021 – May 2022",
     description: `• Assisted in a variety of departmental projects that include: enforcing the filing system in place, learning basic HTML to update the University’s website, and assisting in general research
       • Completed administrative tasks such as formatting documents, updating records, reviewing/editing communications, and providing general support in The HUB
@@ -85,8 +85,7 @@ export const resume = [
     id: "6",
     type: "work",
     title: "Youth Employment Coordinator Intern",
-    organization:
-      "City of Boston - Department of Youth Employment & Engagement",
+    organization: "City of Boston - DYEE",
     period: "May 2019 - Aug 2019, Jun 2020 - Aug 2021",
     description: `• Promoted from Lead Intern to Coordinator Intern in 2020 and lead a team of two to 3 successful employment seasons while taking online university courses as a full-time student
       • Spearheaded the transformation of an outdated manual time entry process by assisting the development of a Time Entry Program in Python, resulting in 50% reduction in time spent inputting time and improved data accuracy

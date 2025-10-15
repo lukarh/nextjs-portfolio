@@ -1,9 +1,8 @@
 export const projectItems = [
   {
     title: "Portfolio Website",
-    description: `A responsive portfolio website to showcase my skills, projects, and experiences in a visually appealing and user-friendly manner.
-        
-        `,
+    description: `A responsive portfolio website to showcase my skills, projects, and experiences in a visually appealing 
+      and user-friendly manner.`,
     date: "May 2023",
     techStack: [
       "TypeScript",

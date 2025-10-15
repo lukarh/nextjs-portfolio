@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import ProjectCard from "@/components/project-card";
 import { projectItems } from "../../../data/projects";
 import { Project } from "@/models/data";
@@ -17,23 +16,16 @@ export default function Page() {
         >
           {projectItems.map((project: Project, index: number) => {
             return (
-              <motion.li
-                className="flex justify-center"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                techStack={project.techStack}
+                githubURL={project.githubURL}
+                appURL={project.appURL}
+                src={project.src}
+                index={index}
                 key={index}
-              >
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  techStack={project.techStack}
-                  githubURL={project.githubURL}
-                  appURL={project.appURL}
-                  src={project.src}
-                />
-              </motion.li>
+              />
             );
           })}
         </ul>
