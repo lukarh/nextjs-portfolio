@@ -105,6 +105,17 @@ export default function LiveActivity({
             )}
           </div>
         </div>
+        <p className="text-xs text-gray-400">
+          Powered by{" "}
+          <a
+            className="underline hover:text-gray-300"
+            href="https://lanyard.eggsy.xyz/"
+            target="_blank"
+          >
+            Lanyard API
+          </a>
+          .
+        </p>
       </div>
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
         <div className="flex flex-row items-center gap-2">
@@ -131,7 +142,17 @@ export default function LiveActivity({
             </p>
           </div>
         </div>
-        <p className="text-xs text-gray-400">Powered by Riot Games API.</p>
+        <p className="text-xs text-gray-400">
+          Powered by{" "}
+          <a
+            className="underline hover:text-gray-300"
+            href="https://developer.riotgames.com/apis"
+            target="_blank"
+          >
+            Riot Games API
+          </a>
+          .
+        </p>
       </div>
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
         <div className="flex flex-row items-center gap-2">
@@ -150,6 +171,13 @@ export default function LiveActivity({
           />
           <Image
             src={"/assets/icons/pokemon.png"}
+            alt={`Teamfight Tactics cover`}
+            className="rounded"
+            width={128}
+            height={128}
+          />
+          <Image
+            src={"/assets/icons/mariokart.jpg"}
             alt={`Teamfight Tactics cover`}
             className="rounded"
             width={128}

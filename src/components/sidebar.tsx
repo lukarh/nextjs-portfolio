@@ -36,7 +36,7 @@ export default function Sidebar() {
       <nav className="pt-10">
         <div className="w-full flex-1 flex flex-col items-end px-5 pb-2">
           <div className="w-[175px]">
-            <h3 className="text-[#A5A5AC] font-bold">User Settings</h3>
+            <p className="text-[#A5A5AC] text-sm font-medium">User Settings</p>
           </div>
         </div>
         <ul className="w-full flex-1 flex flex-col items-end px-3">

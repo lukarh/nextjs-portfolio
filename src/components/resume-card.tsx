@@ -42,23 +42,28 @@ export default function ResumeCard({
       transition={{ duration: 0.4, delay: index * 0.1 }}
       className="mb-10 ml-6 relative"
     >
-      {/* Timeline Dot */}
+      {/* TIMELINE DOT */}
       <span
         className={`absolute -left-[32px] flex items-center justify-center w-4 h-4 rounded-full ${
           item.type === "work"
             ? "bg-indigo-500 shadow-indigo-500/50"
             : "bg-emerald-500 shadow-emerald-500/50"
         } shadow-md`}
-      ></span>
+      />
 
+      {/* RESUME CARD CONTENT */}
       <div className="bg-[#1A1A1E] border border-[#323236] rounded-xl p-5 shadow-lg hover:shadow-xl hover:border-slate-400/30 transition-all duration-300">
+        {/* JOB TITLE */}
         <div className="flex items-center gap-3 mb-1">
+          {/* WORK OR EDUCATION ICON */}
           {item.type === "work" ? (
             <FaBriefcase className="text-indigo-400 text-lg" />
           ) : (
             <FaGraduationCap className="text-emerald-400 text-lg" />
           )}
+          {/* TITLE */}
           <h3 className="text-lg font-semibold text-slate-100">{item.title}</h3>
+          {/* ACTIVE JOB BADGE */}
           {item.active && (
             <div className="flex items-center gap-2 bg-zinc-800 text-white px-3 py-1 rounded-full text-xs font-small">
               {/* Green circle */}
@@ -67,10 +72,13 @@ export default function ResumeCard({
             </div>
           )}
         </div>
+        {/* JOB DESCRIPTION */}
         <div className="flex flex-row gap-2 items-center">
+          {/* ORGANIZATION */}
           <p className="text-md text-slate-400 font-medium">
             {item.organization}
           </p>
+          {/* LOGO / ICON */}
           {item.src && (
             <Image
               className="object-contain"
@@ -81,8 +89,9 @@ export default function ResumeCard({
             />
           )}
         </div>
+        {/* DURATION */}
         <p className="text-sm text-slate-500 mb-2">{item.period}</p>
-
+        {/* SKILLS */}
         {item.skills && (
           <div className="flex flex-row flex-wrap gap-3 mb-2 text-sm">
             {item.skills.map((name: string, index: number) => {
@@ -91,6 +100,7 @@ export default function ResumeCard({
           </div>
         )}
 
+        {/* DESCRIPTION */}
         <div className="relative">
           <p
             ref={textRef}

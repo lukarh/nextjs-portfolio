@@ -19,6 +19,7 @@ export const skillsMap: Record<string, string> = {
   "Bootstrap Components": "#7952B3",
   "Node.js": "#339933",
   "Discord API": "#5865F2",
+  "Lanyard API": "#7289DA",
   "NBA Live API": "#CE1141",
   "Riot Games API": "#ED1C40",
   ApexCharts: "#FF6F61",
@@ -34,4 +35,5 @@ export const skillsMap: Record<string, string> = {
   Jupyter: "#F37626",
   Tableau: "#E97627",
   DocuSign: "#2672EC",
+  "Framer Motion": "#0055FF",
 };
