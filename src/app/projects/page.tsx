@@ -7,7 +7,7 @@ import { Project } from "@/models/data";
 export default function Page() {
   return (
     <main className="h-screen w-full bg-zinc-900">
-      <div className="h-full pb-25">
+      <div className="h-full pb-30">
         <ul
           className={`h-full w-full xl:max-w-[900px] 
           group/list overflow-y-auto hide-scrollbar
