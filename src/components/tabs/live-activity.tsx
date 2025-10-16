@@ -161,7 +161,7 @@ export default function LiveActivity({
           </h2>
           <PiGameControllerFill className="text-gray-500" size={14} />
         </div>
-        <div className="flex flex-row overflow-x-auto gap-5 pt-2 pb-4">
+        <div className="flex flex-row overflow-x-auto dark-scroll gap-5 pt-2 pb-4">
           <Image
             src={"/assets/icons/valorant.jpg"}
             alt={`Valorant cover`}
