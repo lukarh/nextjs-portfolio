@@ -59,8 +59,10 @@ export default function ProjectCard({
         <div className="w-full flex flex-col gap-5">
           <div className="flex flex-row items-center">
             <div className="flex flex-col pr-5">
-              <p className="text-xl text-slate-200 font-bold pb-5">{title}</p>
-              <p className="text-lg text-slate-300 font-medium">
+              <p className="text-lg sm:text-xl text-slate-200 font-bold pb-5">
+                {title}
+              </p>
+              <p className="text-sm sm:text-lg text-slate-300 font-medium">
                 {description}
               </p>
             </div>
@@ -76,7 +78,7 @@ export default function ProjectCard({
           </div>
           <div className="flex flex-row flex-wrap gap-3 mt-3">
             {techStack?.map((name: string, index: number) => {
-              return <SkillBadge name={name} textSize={"sm"} key={index} />;
+              return <SkillBadge name={name} textSize={"xs"} key={index} />;
             })}
           </div>
         </div>
