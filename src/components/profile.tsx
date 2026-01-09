@@ -24,7 +24,7 @@ export default function Profile({
           className="w-full h-auto object-cover object-bottom"
           unoptimized
         />
-        <div
+        {/* <div
           className="absolute top-18 z-2"
           style={{ left: `${avatarLeft}rem` }}
         >
@@ -35,13 +35,13 @@ export default function Profile({
             height={144}
             unoptimized
           />
-        </div>
+        </div> */}
         <div
           className="absolute top-18 z-1"
           style={{ left: `${avatarLeft}rem` }}
         >
           <Image
-            src={status?.discordAvatar || "/assets/profile/eevee.png"}
+            src={status?.discordAvatar || "/assets/profile/tanjiro.png"}
             alt="Discord Avatar"
             className="rounded-full bg-white outline-10 outline-[#1A1A1E]"
             width={144}
@@ -68,7 +68,7 @@ export default function Profile({
                 />
                 <Image
                   src="/assets/badges/developer.gif"
-                  alt="Discord Known Icon"
+                  alt="Discord Developer Icon"
                   title="Developer Badge"
                   width={16}
                   height={16}
@@ -76,8 +76,15 @@ export default function Profile({
                 />
                 <Image
                   src="/assets/badges/quest.png"
-                  alt="Discord Known Icon"
+                  alt="Discord Quest Icon"
                   title="Completed a Quest"
+                  width={16}
+                  height={16}
+                />
+                <Image
+                  src="/assets/badges/orbs.png"
+                  alt="Discord Orbs Icon"
+                  title="Orbs - Apprentice"
                   width={16}
                   height={16}
                 />

@@ -3,7 +3,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { LuUserRound, LuFile } from "react-icons/lu";
-import { MdOutlineTimeline } from "react-icons/md";
+import { MdOutlineTimeline, MdOutlineAutoGraph } from "react-icons/md";
 
 export default function Sidebar() {
   const SidebarData = [
@@ -22,6 +22,11 @@ export default function Sidebar() {
       text: "Projects",
       hrefs: ["/projects"],
     },
+    // {
+    //   icon: <MdOutlineAutoGraph size={18} />,
+    //   text: "Data Vizs",
+    //   hrefs: ["/data-vizs"],
+    // },
     // {
     //   icon: <LuMessageCircle size={18} />,
     //   text: "Message",
