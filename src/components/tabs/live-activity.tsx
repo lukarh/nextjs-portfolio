@@ -137,7 +137,7 @@ export default function LiveActivity({
               style={{ color: rankTextColor("DIAMOND") }}
               // style={{ color: rankTextColor(tftData.tier || "N/A") }}
             >
-              {"DIAMOND III"}
+              {"EMERALD III"}
               {/* {rankText()} */}
             </p>
           </div>
@@ -149,7 +149,7 @@ export default function LiveActivity({
             href="https://developer.riotgames.com/apis"
             target="_blank"
           >
-            Riot Games API
+            Riot Games API (pending approval)
           </a>
           .
         </p>
