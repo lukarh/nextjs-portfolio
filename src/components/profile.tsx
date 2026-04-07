@@ -41,7 +41,7 @@ export default function Profile({
           style={{ left: `${avatarLeft}rem` }}
         >
           <Image
-            src={status?.discordAvatar || "/assets/profile/tanjiro.png"}
+            src={status?.discordAvatar || "/assets/profile/pikachu.png"}
             alt="Discord Avatar"
             className="rounded-full bg-white outline-10 outline-[#1A1A1E]"
             width={144}

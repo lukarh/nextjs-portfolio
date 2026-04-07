@@ -82,7 +82,8 @@ export default function AboutMe() {
         Outside of work, I enjoy playing video games — particularly games that
         involve 🤝 teamwork, 🎯 tactical decision-making, and♟️strategy, which
         are skills that I try to apply both in and out of work. And yes, I touch
-        grass🌿occassionally by playing basketball 🏀 and working out🏋️‍♂️.
+        grass 🌿 occassionally by playing basketball 🏀, volleyball 🏐, running
+        🏃‍♀️, and working out🏋️‍♂️.
       </p>
       {/* EXPERIENCE & EDUCATION SECTION */}
       <div>

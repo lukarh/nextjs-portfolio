@@ -83,7 +83,8 @@ export default function LiveActivity({
         <div className="flex flex-row gap-5">
           <Image
             src={
-              status?.activities?.album_art_url || "/assets/spotify/ZOMBIES.jpg"
+              status?.activities?.album_art_url ||
+              "/assets/spotify/masshiro.jpg"
             }
             alt={`${status?.activities?.album} cover`}
             className="rounded"
@@ -91,9 +92,11 @@ export default function LiveActivity({
             height={128}
           />
           <div className="w-full flex flex-col justify-center">
-            <p className="font-bold">{status?.activities?.song || "ZOMBIES"}</p>
+            <p className="font-bold">
+              {status?.activities?.song || "masshiro (pure white)"}
+            </p>
             <p className="text-sm mb-3">
-              {status?.activities?.artist || "pH-1"}
+              {status?.activities?.artist || "Fujii Kaze"}
             </p>
             {status?.listening_to_spotify && (
               <SongProgressBar
@@ -137,7 +140,16 @@ export default function LiveActivity({
               style={{ color: rankTextColor("DIAMOND") }}
               // style={{ color: rankTextColor(tftData.tier || "N/A") }}
             >
-              {"EMERALD III"}
+              {"Diamond IV (S16), Master (S15), Emerald III (S14)"}
+              {/* {rankText()} */}
+            </p>
+            <p className="font-bold">Double Up</p>
+            <p
+              className="text-sm mb-3"
+              style={{ color: rankTextColor("DIAMOND") }}
+              // style={{ color: rankTextColor(tftData.tier || "N/A") }}
+            >
+              {"Master (S16), Master (S15), Emerald III (S14)"}
               {/* {rankText()} */}
             </p>
           </div>
@@ -149,9 +161,10 @@ export default function LiveActivity({
             href="https://developer.riotgames.com/apis"
             target="_blank"
           >
-            Riot Games API (pending approval)
-          </a>
-          .
+            Riot Games API
+          </a>{" "}
+          (pending approval - so here's my peak for all the sets I've played
+          :D).
         </p>
       </div>
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">
@@ -162,6 +175,13 @@ export default function LiveActivity({
           <PiGameControllerFill className="text-gray-500" size={14} />
         </div>
         <div className="flex flex-row overflow-x-auto dark-scroll gap-5 pt-2 pb-4">
+          <Image
+            src={"/assets/icons/TFT.png"}
+            alt={`Teamfight Tactics cover`}
+            className="rounded"
+            width={128}
+            height={128}
+          />
           <Image
             src={"/assets/icons/valorant.jpg"}
             alt={`Valorant cover`}
@@ -177,8 +197,15 @@ export default function LiveActivity({
             height={128}
           />
           <Image
+            src={"/assets/icons/pokopia.jpeg"}
+            alt={`Pokopia cover`}
+            className="rounded"
+            width={128}
+            height={128}
+          />
+          <Image
             src={"/assets/icons/mariokart.jpg"}
-            alt={`Teamfight Tactics cover`}
+            alt={`Mario Kart cover`}
             className="rounded"
             width={128}
             height={128}

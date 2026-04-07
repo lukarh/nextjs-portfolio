@@ -76,3 +76,17 @@ body {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
 }
+
+.dark-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.dark-scroll::-webkit-scrollbar-track {
+  background: #1a1a1e;
+  border-radius: 9999px;
+}
+
+.dark-scroll::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 9999px;
+}
