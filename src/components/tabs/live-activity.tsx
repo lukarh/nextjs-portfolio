@@ -163,8 +163,9 @@ export default function LiveActivity({
           >
             Riot Games API
           </a>{" "}
-          (pending approval - so here's my peak for all the sets I've played
-          :D).
+          {
+            "(pending approval - so here's my peak for all the sets I've played :D)."
+          }
         </p>
       </div>
       <div className="w-full flex flex-col gap-3 bg-[#2C2D32] p-5 mt-5 rounded-xl">

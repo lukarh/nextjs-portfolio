@@ -3,7 +3,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { LuUserRound, LuFile } from "react-icons/lu";
-import { MdOutlineTimeline, MdOutlineAutoGraph } from "react-icons/md";
+import { MdOutlineTimeline } from "react-icons/md";
 
 export default function Sidebar() {
   const SidebarData = [
