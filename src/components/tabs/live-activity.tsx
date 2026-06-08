@@ -84,7 +84,7 @@ export default function LiveActivity({
           <Image
             src={
               status?.activities?.album_art_url ||
-              "/assets/spotify/masshiro.jpg"
+              "/assets/spotify/justdoyou.jpg"
             }
             alt={`${status?.activities?.album} cover`}
             className="rounded"
@@ -93,10 +93,10 @@ export default function LiveActivity({
           />
           <div className="w-full flex flex-col justify-center">
             <p className="font-bold">
-              {status?.activities?.song || "masshiro (pure white)"}
+              {status?.activities?.song || "JUST DO YOU"}
             </p>
             <p className="text-sm mb-3">
-              {status?.activities?.artist || "Fujii Kaze"}
+              {status?.activities?.artist || "ØZI, sunkis"}
             </p>
             {status?.listening_to_spotify && (
               <SongProgressBar
